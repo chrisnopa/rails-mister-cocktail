@@ -23,6 +23,9 @@ def destroy
   @dose.destroy
 end
 
+def set_cocktail
+  @cocktail = Cocktail.find[:cocktail_id]
+end
 private
 
   def dose_params

@@ -1,12 +1,12 @@
 
 
     <div class="container">
-      <div class="row">
-        <div class="col xs-12 col-sm-6 col-sm-offset-3"">
+      <div class="row text-center">
+        <div class= "col xs-12 col-sm-6 col-sm-offset-3">
           <%= simple_form_for [@cocktail] do |f| %>
             <%= f.input :name %>
             <%= f.submit "add a cocktail", class: "btn btn-primary" %>
-        <%= link_to 'Retour aux cocktails', cocktails_path, class:"btn btn-primary" %>
+            <%= link_to 'Retour aux cocktails', cocktails_path, class:"btn btn-danger btn-large" %>
           <% end %>
         </div>
       </div>
