@@ -6,9 +6,20 @@
       <% @cocktails.each do |cocktail| %>
         <p><%= cocktail.name %></p>
         <%= link_to "Recette", cocktail_path(cocktail), class:"btn btn-primary"  %>
-
         <%end%>
 
     </div>
   </div>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= render "card", cocktail: cocktail%>
+      <%end %>
+    </div>
+  </div>
+</div>
+
