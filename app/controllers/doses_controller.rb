@@ -20,7 +20,9 @@ end
 
 def destroy
   @dose = Dose.find(params[:id])
+  @cocktail = @dose.cocktail
   @dose.destroy
+  redirect_to cocktail_path
 end
 
 def set_cocktail
