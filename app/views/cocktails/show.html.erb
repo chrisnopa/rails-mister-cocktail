@@ -1,13 +1,14 @@
 
 
+<h2 class="text-center"><%= link_to 'Retour aux cocktails', cocktails_path, class:"text-center btn btn-primary btn-large" %> </h2>
 <div class="container text-center">
   <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-6">
-        <h2><%= link_to 'Retour aux cocktails', cocktails_path, class:"text-center btn btn-primary btn-large" %> </h2>
+    <div class="col xs-12 col-sm-6 col-sm-offset-3">
         <h2><%= @cocktail.name %></h2>
+         <%= cl_image_tag @cocktail.photo, height: 200, width: 200, crop: :fill %>
         <%= link_to 'add a dose', new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %>
            <% @cocktail.doses.each do |dose| %>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled list-inline">
               <li>
             <%= dose.description %>
               </li>
@@ -15,7 +16,7 @@
             <%= dose.ingredient[:name] %>
               </li>
               <li>
-             <%= link_to 'delete dose', cocktail_path, class:"btn btn-primary" %>
+              <%= link_to 'delete dose', dose_path, class:"btn btn-primary ", method: :delete, data: { confirm: 'Are you sure?' }%>
               </li>
             </ul>
         <%end %>
