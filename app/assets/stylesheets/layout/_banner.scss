@@ -1,7 +1,7 @@
 .banner {
   color: white;
   text-align: center;
-  height: 70vh;
+  height: 80vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -10,7 +10,8 @@
 }
 .banner h1 {
   font-size: 50px;
-  font-weight: lighter;
+  font-weight: bold;
+  font-family: 'Abril Fatface', sans-serif;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 .banner p {
@@ -19,3 +20,22 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
+
+.btn-lg-alt {
+    padding: 5px;
+    line-height: 1.8em;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 3px solid #f9f9f9;
+    text-decoration: none;
+    font-size:30px;
+    font-weight: bold;
+    color:white;
+    transition: background-color .3s ease-in-out;
+  }
+
+  .btn-lg-alt:hover {
+    background-color: #f9f9f9;
+    color: #333;
+  }

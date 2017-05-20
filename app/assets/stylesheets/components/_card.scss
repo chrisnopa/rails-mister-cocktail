@@ -6,7 +6,9 @@
   position: relative;
   margin-top: 20px;
   margin-bottom: 30px;
-  border-radius:1%
+  border-radius:1%;
+
+
 }
 .card-user {
   position: absolute;
@@ -27,6 +29,9 @@
 }
 .card-description h2 {
   font-size: 24px;
+
+    font-family: 'Oswald', sans-serif;
+
 }
 .card-description p {
   font-size: 13px;
@@ -43,4 +48,5 @@
 }
 .card-link:hover{
   opacity: 0.1;
+  transition: color 0.2s ease;
 }
